@@ -1,0 +1,11 @@
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <strong><%= event.name %></strong>
+      In <%= event.location %>: <%= price event%>
+    </li>
+    <p><%= date_and_time event %></p>
+    <p><%= event.description.truncate 10, separator: ' ' if !event.description.nil? %></p>
+  <% end %>
+</ul>
+<%= console %>
